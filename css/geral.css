@@ -1,0 +1,95 @@
+/*GERAL*/
+body,h1,h2,h3,p,ul,li {
+  margin: 0px;
+  padding: 0px;
+}
+body{
+  font: 400 1.5rem/1.5 'Open Sans', sans-serif;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  max-width: 1360px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 750px) {
+  .container {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+.botao {
+  display: inline-block;
+  background: var(--cor-a1);
+  color: var(--cor-n1);
+  padding: 10px 40px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+
+/*Cores*/
+:root {
+  --cor-p1: hsl(243, 87%, 12%);
+  --cor-p2: hsl(238, 22%, 44%);
+  --cor-a1: hsl(224, 93%, 58%);
+  --cor-a2: hsl(170, 45%, 43%);
+  --cor-n1: #F6F6FE;
+  --cor-n2: hsl(0, 0%, 75%);
+}
+
+.cor-p1 {
+  color: var(--cor-p1);
+}
+.cor-p2{
+  color: var(--cor-p2);
+}
+.cor-a1 {
+  color: var(--cor-a1);
+}
+.cor-a2 {
+  color: var(--cor-a2);
+}
+.cor-n1 {
+  color: var(--cor-n1);
+}
+.cor-n2 {
+  color: var(--cor-n2);
+}
+
+/*Tipocrafias*/
+
+.font-g {
+  font: 400 1.5rem/1.25 'Raleway', sans-serif;
+}
+.font-g-b {
+  font: 700 2rem/1.25 'Raleway', sans-serif;
+}
+
+.font-p {
+  font: 400 1.5rem/1.5 'Open Sans', sans-serif;
+}
+
+@media (max-width: 1200px) {
+  body, .font-p {
+    font-size: .875rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .font-g-b {
+    font-size: 1.5rem;
+  }
+}
