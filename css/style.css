@@ -13,12 +13,18 @@
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  font-size: .875rem;
+  font-size: 1.5rem;
   line-height: 1; 
 }
 
 header .menu a {
   color: var(--cor-p1);
+}
+
+@media (max-width: 600px) {
+  .header .menu a {
+    font-size: .875rem;
+  }
 }
 
 /*introdução*/
@@ -28,13 +34,20 @@ header .menu a {
   padding-bottom: 120px;
   background: url("../images/bg-curve-mobile.svg") no-repeat bottom;
 }
+@media (min-width: 376px) {
+  .introducao {
+    background: url("../images/bg-curve-desktop.svg") no-repeat bottom;
+  }
+  .introducao-start {
+    margin-bottom: 120px;
+  }
+}
 
 .introducao-img {
   grid-row: 1;
   padding: 0 10px;
   margin-bottom: 30px;
 }
-
 
 .introducao-conteudo h1, .introducao-conteudo p {
   text-align: center;
@@ -63,6 +76,7 @@ header .menu a {
   flex: 1;
   text-align: center;
   min-width: 100px;
+  padding: 10px;
 }
 
 /*main*/
@@ -73,7 +87,7 @@ header .menu a {
   background-color: var(--cor-n1);
   position: relative;
   top: -2px;
-  padding-bottom: 80px;
+  padding-bottom: 60px;
 }
 
 .produtivo-conteudo h2 {
@@ -82,20 +96,20 @@ header .menu a {
   margin-bottom: 20px;
 }
 
-.produtivo-conteudo p {
+.produtivo-conteudo > p {
   margin-bottom: 20px;
 }
 
 .produtivo-works {
   text-align: center;
   font: 400 .750rem/1.25 'Open Sans', sans-serif;
+  margin: 20px 0;
 }
 .produtivo-works a {
   display: inline-flex;
   align-items: center;
   border-bottom: 1px solid;
   padding: 0 6px 3px 0;
-  margin: 20px 0;
 }
 .produtivo-works a::after {
   content: "";
@@ -117,5 +131,232 @@ header .menu a {
   border-radius: 5px;
   padding: 20px;
   margin: 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
+.produtivo-card > p {
+  font-size: .650rem;
+  letter-spacing: .5px;
+  margin-bottom: 15px;
+}
+
+.produtivo-card > p::before {
+  content: "";
+  display: block;
+  width: 13px;
+  height: 12px;
+  background: url("../images/icon-quotes.svg");
+  position: relative;
+  top: -5px;
+}
+
+.produtivo-fundador {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0 10px;
+}
+
+.produtivo-fundador img {
+  width: 32px;
+  border-radius: 50%;
+}
+
+.produtivo-fundador p {
+  font: 700 .650rem 'Raleway', sans-serif;
+  position: relative;
+  top: 4px;
+}
+
+.produtivo-fundador span {
+  font-size: .550rem;
+}
+
+
+/*Acesso*/
+
+.acesso-bg {
+  background: var(--cor-p2);
+  padding: 60px 0;
+}
+
+.acesso {
+  color: #F6F6FE;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.acesso-texto h3 {
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.acesso-texto p {
+  text-align: center;
+  padding: 0 25px;
+  margin-bottom: 20px;
+}
+
+.acesso-start {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0 50px;
+}
+
+.acesso-start input {
+  padding: 10px;
+  flex: 1 1 0;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+.acesso-start input::placeholder {
+  color: var(--cor-n2);
+  font-size: .700rem;
+}
+
+.acesso-start a {
+  text-align: center;
+  font-size: .750rem;
+  min-width: 120px;
+  flex: 1;
+  padding: 10px;
+}
+
+
+
+/*Footer*/
+
+.footer-bg {
+  background: var(--cor-p1);
+  padding: 40px 20px;
+}
+
+.footer {
+  color: var(--cor-n1);
+}
+
+.footer-logo {
+  margin-bottom: 30px;
+}
+
+.footer-conteudo {
+  display: grid;
+  gap: 30px;
+}
+
+.footer-dados li {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.footer-blog li, .footer-termos li {
+  margin-bottom: 10px;
+}
+
+.footer-redes {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.footer-redes img {
+  border: 1px solid #fff;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+
+/*Medias*/
+
+@media (min-width: 930px) {
+  .introducao {
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 160px;
+  }
+  .introducao-conteudo {
+    align-self: center;
+  }
+  .introducao-img {
+    grid-column: 2;
+  }
+  .introducao-conteudo h1,
+  .introducao-conteudo p {
+    text-align: start;
+    padding: 0 20px;
+  }
+  .introducao-start {
+    margin-bottom: 0px;
+  }
+  .introducao-start input {
+    min-width: 200px;
+  }
+  .introducao-start a {
+    font-size: 1rem;
+    max-width: 200px;
+  }
+
+  .produtivo {
+    grid-template-columns: 1fr 1fr;
+  }
+  .produtivo-img {
+    grid-column: 2;
+  }
+  .produtivo-conteudo h2 {
+    text-align: start;
+    font: 700 2rem/1.25 'Raleway', sans-serif;
+  }
+  .produtivo-works {
+    font-size: 1.1rem;
+    text-align: start;
+    margin-bottom: 50px;
+  }
+  .produtivo-card {
+    max-width: 310px;
+    margin: 0px;
+  }
+  .produtivo-card p {
+    font-size: .875rem;
+  }
+
+  .acesso {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .acesso-texto h3 {
+    font-size: 2rem;
+    text-align: start;
+  }
+  .acesso-texto p {
+    font-size: 1.250rem;
+    text-align: start;
+    padding: 0px;
+    max-width: 54ch;
+  }
+  .acesso-start {
+    display: grid;
+    align-self: center;
+    gap: 15px;
+  }
+  .acesso-start input {
+    padding: 15px;
+    font-size: 1.1rem;
+  }
+  .acesso-start input::placeholder {
+    font-size: 1rem;
+  }
+  .acesso-start a {
+    justify-self: start;
+    font-size: 1rem;
+    padding: 15px 30px;
+  }
+
+  .footer-conteudo {
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+  }
+}
