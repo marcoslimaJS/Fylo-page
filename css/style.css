@@ -393,3 +393,9 @@ header .menu a {
     font-size: 1.1rem;
   }
 }
+
+@media (min-width: 1200px) {
+  .introducao-conteudo h1 {
+    font-size: 2.5rem;
+  }
+}
